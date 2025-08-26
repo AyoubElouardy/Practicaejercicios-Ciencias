@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matemáticas - PracticaEjercicios.com</title>
+    <title>Ciencias - PracticaEjercicios.com</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #4a6fa5;
-            --secondary-color: #166088;
-            --accent-color: #4cb5f5;
+            --primary-color: #6a1b9a;
+            --secondary-color: #8e24aa;
+            --accent-color: #ab47bc;
             --light-color: #f8f9fa;
             --dark-color: #343a40;
             --success-color: #28a745;
             --warning-color: #ffc107;
             --danger-color: #dc3545;
-            --math-color: #e74c3c;
-            --algebra-color: #3498db;
-            --geometry-color: #2ecc71;
-            --calculus-color: #9b59b6;
-            --arithmetic-color: #f39c12;
+            --physics-color: #7b1fa2;
+            --chemistry-color: #8e24aa;
+            --biology-color: #9c27b0;
         }
         
         * {
@@ -43,7 +41,7 @@
         }
         
         header {
-            background: linear-gradient(135deg, var(--math-color), #c0392b);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             padding: 1rem 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -90,7 +88,7 @@
         }
         
         .hero {
-            background: linear-gradient(rgba(231, 76, 60, 0.8), rgba(192, 57, 43, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%23e74c3c" width="100" height="100"/><path fill="%23c0392b" d="M0 0L100 100" stroke-width="0"/></svg>');
+            background: linear-gradient(rgba(106, 27, 154, 0.8), rgba(142, 36, 170, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%236a1b9a" width="100" height="100"/><path fill="%238e24aa" d="M0 0L100 100" stroke-width="0"/></svg>');
             background-size: cover;
             color: white;
             padding: 4rem 0;
@@ -122,7 +120,7 @@
         }
         
         .btn:hover {
-            background-color: #3a9bd5;
+            background-color: #ba68c8;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
@@ -134,19 +132,15 @@
         
         .btn-outline:hover {
             background: white;
-            color: var(--math-color);
+            color: var(--primary-color);
         }
         
-        .btn-math { background-color: var(--math-color); }
-        .btn-math:hover { background-color: #c0392b; }
-        .btn-algebra { background-color: var(--algebra-color); }
-        .btn-algebra:hover { background-color: #2980b9; }
-        .btn-geometry { background-color: var(--geometry-color); }
-        .btn-geometry:hover { background-color: #27ae60; }
-        .btn-calculus { background-color: var(--calculus-color); }
-        .btn-calculus:hover { background-color: #8e44ad; }
-        .btn-arithmetic { background-color: var(--arithmetic-color); }
-        .btn-arithmetic:hover { background-color: #d35400; }
+        .btn-physics { background-color: var(--physics-color); }
+        .btn-physics:hover { background-color: #8e24aa; }
+        .btn-chemistry { background-color: var(--chemistry-color); }
+        .btn-chemistry:hover { background-color: #9c27b0; }
+        .btn-biology { background-color: var(--biology-color); }
+        .btn-biology:hover { background-color: #ab47bc; }
         
         .topics {
             padding: 4rem 0;
@@ -179,17 +173,16 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s;
-            border-top: 5px solid var(--math-color);
+            border-top: 5px solid var(--primary-color);
         }
         
         .topic-card:hover {
             transform: translateY(-5px);
         }
         
-        .topic-card.algebra { border-top-color: var(--algebra-color); }
-        .topic-card.geometry { border-top-color: var(--geometry-color); }
-        .topic-card.calculus { border-top-color: var(--calculus-color); }
-        .topic-card.arithmetic { border-top-color: var(--arithmetic-color); }
+        .topic-card.physics { border-top-color: var(--physics-color); }
+        .topic-card.chemistry { border-top-color: var(--chemistry-color); }
+        .topic-card.biology { border-top-color: var(--biology-color); }
         
         .topic-icon {
             height: 120px;
@@ -200,10 +193,9 @@
             color: white;
         }
         
-        .topic-card.algebra .topic-icon { background: linear-gradient(135deg, var(--algebra-color), #2980b9); }
-        .topic-card.geometry .topic-icon { background: linear-gradient(135deg, var(--geometry-color), #27ae60); }
-        .topic-card.calculus .topic-icon { background: linear-gradient(135deg, var(--calculus-color), #8e44ad); }
-        .topic-card.arithmetic .topic-icon { background: linear-gradient(135deg, var(--arithmetic-color), #d35400); }
+        .topic-card.physics .topic-icon { background: linear-gradient(135deg, var(--physics-color), #8e24aa); }
+        .topic-card.chemistry .topic-icon { background: linear-gradient(135deg, var(--chemistry-color), #9c27b0); }
+        .topic-card.biology .topic-icon { background: linear-gradient(135deg, var(--biology-color), #ab47bc); }
         
         .topic-content {
             padding: 1.5rem;
@@ -244,7 +236,7 @@
             background-color: white;
             border: 1px solid #ddd;
             border-bottom: none;
-            color: var(--math-color);
+            color: var(--primary-color);
             font-weight: 600;
         }
         
@@ -309,7 +301,7 @@
         
         .option.selected {
             border-color: var(--primary-color);
-            background-color: #e8f4fd;
+            background-color: #f3e5f5;
         }
         
         .option.correct {
@@ -361,7 +353,7 @@
             display: inline-flex;
             align-items: center;
             margin-bottom: 2rem;
-            color: var(--math-color);
+            color: var(--primary-color);
             text-decoration: none;
             font-weight: 600;
             padding: 0.5rem 1rem;
@@ -403,7 +395,7 @@
         
         .difficulty-basic { border-top: 5px solid var(--success-color); }
         .difficulty-intermediate { border-top: 5px solid var(--warning-color); }
-        .difficulty-advanced { border-top: 5px solid var(--math-color); }
+        .difficulty-advanced { border-top: 5px solid var(--primary-color); }
         
         .difficulty-icon {
             font-size: 2.5rem;
@@ -412,7 +404,7 @@
         
         .difficulty-basic .difficulty-icon { color: var(--success-color); }
         .difficulty-intermediate .difficulty-icon { color: var(--warning-color); }
-        .difficulty-advanced .difficulty-icon { color: var(--math-color); }
+        .difficulty-advanced .difficulty-icon { color: var(--primary-color); }
         
         .difficulty-card h3 {
             margin-bottom: 1rem;
@@ -435,7 +427,7 @@
         
         .difficulty-card ul li:before {
             content: "•";
-            color: var(--math-color);
+            color: var(--primary-color);
             font-weight: bold;
             position: absolute;
             left: 0;
@@ -653,7 +645,6 @@
             
             .topics-grid, .difficulty-cards {
                 grid-template-columns: 1fr;
-
             }
             
             .options-container {
@@ -690,11 +681,11 @@
             <div class="logo">Practica<span>Ejercicios</span></div>
             <nav>
                 <ul>
-                    <li><a href="https://ayoubelouardy.github.io/Practicaejercicios/" class="nav-link" data-page="home">Inicio</a></li>
-                    <li><a href="#" class="nav-link" data-page="math">Matemáticas</a></li>
-                    <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Lengua-Castellana/">Lenguaje</a></li>
-                    <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Ciencias/" class="nav-link" data-page="science">Ciencias</a></li>
-                    <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Ciencias-Sociales/" class="nav-link">Sociales</a></li>
+                    <li><a href="https://ayoubelouardy.github.io/Practicaejercicios/" target="_blank">Inicio</a></li>
+                    <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Lengua-Castellana/" target="_blank">Lenguaje</a></li>
+                    <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Matem-ticas/" target="_blank">Matemáticas</a></li>
+                    <li><a href="#" class="nav-link" data-page="science">Ciencias</a></li>
+                    <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Ciencias-Sociales/" target="_blank">Sociales</a></li>
                 </ul>
             </nav>
             <div class="user-menu">
@@ -721,7 +712,7 @@
                             <div class="stat-label">Precisión</div>
                         </div>
                     </div>
-                    <button class="btn btn-math" id="loginBtn">Iniciar Sesión</button>
+                    <button class="btn btn-physics" id="loginBtn">Iniciar Sesión</button>
                 </div>
             </div>
         </div>
@@ -731,49 +722,41 @@
         <section class="subject-page active" id="home-page">
             <section class="hero">
                 <div class="container">
-                    <h1>Domina las Matemáticas con Ejercicios Prácticos</h1>
-                    <p>Álgebra, geometría, cálculo, aritmética y más. Miles de ejercicios interactivos para todos los niveles.</p>
-                    <a href="#" class="btn btn-math nav-link" data-page="math">Comenzar ahora</a>
+                    <h1>Domina las Ciencias con Ejercicios Prácticos</h1>
+                    <p>Física, química, biología y más. Miles de ejercicios interactivos para todos los niveles.</p>
+                    <a href="#" class="btn btn-physics nav-link" data-page="science">Comenzar ahora</a>
                     <a href="#" class="btn btn-outline">Ver ejemplos</a>
                 </div>
             </section>
             <section class="topics">
                 <div class="container">
                     <div class="section-title">
-                        <h2>Temas de Matemáticas</h2>
-                        <p>Explora nuestros ejercicios por área de matemáticas</p>
+                        <h2>Temas de Ciencias</h2>
+                        <p>Explora nuestros ejercicios por área de ciencias</p>
                     </div>
                     <div class="topics-grid">
-                        <div class="topic-card algebra">
-                            <div class="topic-icon">∑</div>
+                        <div class="topic-card physics">
+                            <div class="topic-icon">⚛️</div>
                             <div class="topic-content">
-                                <h3>Álgebra</h3>
-                                <p>Ecuaciones, polinomios, sistemas de ecuaciones y más.</p>
-                                <a href="#" class="btn btn-algebra practice-btn" data-subject="algebra">Practicar</a>
+                                <h3>Física</h3>
+                                <p>Mecánica, termodinámica, óptica y electricidad.</p>
+                                <a href="#" class="btn btn-physics practice-btn" data-subject="physics">Practicar</a>
                             </div>
                         </div>
-                        <div class="topic-card geometry">
-                            <div class="topic-icon">π</div>
+                        <div class="topic-card chemistry">
+                            <div class="topic-icon">🧪</div>
                             <div class="topic-content">
-                                <h3>Geometría</h3>
-                                <p>Ángulos, polígonos, trigonometría y teoremas.</p>
-                                <a href="#" class="btn btn-geometry practice-btn" data-subject="geometry">Practicar</a>
+                                <h3>Química</h3>
+                                <p>Reacciones químicas, estequiometría, y química orgánica.</p>
+                                <a href="#" class="btn btn-chemistry practice-btn" data-subject="chemistry">Practicar</a>
                             </div>
                         </div>
-                        <div class="topic-card calculus">
-                            <div class="topic-icon">∫</div>
+                        <div class="topic-card biology">
+                            <div class="topic-icon">🧬</div>
                             <div class="topic-content">
-                                <h3>Cálculo</h3>
-                                <p>Derivadas, integrales, límites y aplicaciones.</p>
-                                <a href="#" class="btn btn-calculus practice-btn" data-subject="calculus">Practicar</a>
-                            </div>
-                        </div>
-                        <div class="topic-card arithmetic">
-                            <div class="topic-icon">%</div>
-                            <div class="topic-content">
-                                <h3>Aritmética</h3>
-                                <p>Operaciones básicas, fracciones, porcentajes y proporciones.</p>
-                                <a href="#" class="btn btn-arithmetic practice-btn" data-subject="arithmetic">Practicar</a>
+                                <h3>Biología</h3>
+                                <p>Celular, genética, ecología y evolución.</p>
+                                <a href="#" class="btn btn-biology practice-btn" data-subject="biology">Practicar</a>
                             </div>
                         </div>
                     </div>
@@ -791,10 +774,9 @@
                             <h3>Nivel Básico</h3>
                             <p>Ejercicios para principiantes y estudiantes de primaria</p>
                             <ul>
-                                <li>Operaciones básicas</li>
-                                <li>Problemas sencillos de álgebra</li>
-                                <li>Geometría elemental</li>
-                                <li>Fracciones y decimales</li>
+                                <li>Conceptos básicos de física</li>
+                                <li>Elementos y compuestos químicos</li>
+                                <li>Biología celular básica</li>
                             </ul>
                             <a href="#" class="btn">Comenzar</a>
                         </div>
@@ -803,10 +785,9 @@
                             <h3>Nivel Intermedio</h3>
                             <p>Ejercicios para estudiantes de secundaria</p>
                             <ul>
-                                <li>Ecuaciones de primer y segundo grado</li>
-                                <li>Geometría analítica</li>
-                                <li>Trigonometría básica</li>
-                                <li>Estadística y probabilidad</li>
+                                <li>Leyes de Newton</li>
+                                <li>Reacciones químicas</li>
+                                <li>Genética básica</li>
                             </ul>
                             <a href="#" class="btn">Comenzar</a>
                         </div>
@@ -815,10 +796,9 @@
                             <h3>Nivel Avanzado</h3>
                             <p>Ejercicios para bachillerato y universidad</p>
                             <ul>
-                                <li>Cálculo diferencial e integral</li>
-                                <li>Álgebra lineal</li>
-                                <li>Geometría avanzada</li>
-                                <li>Ecuaciones diferenciales</li>
+                                <li>Mecánica cuántica</li>
+                                <li>Química orgánica avanzada</li>
+                                <li>Evolución y ecología</li>
                             </ul>
                             <a href="#" class="btn">Comenzar</a>
                         </div>
@@ -826,64 +806,56 @@
                 </div>
             </section>
         </section>
-        <section class="subject-page" id="math-page">
+        <section class="subject-page" id="science-page">
             <div class="container">
-                <a href="https://ayoubelouardy.github.io/Practicaejercicios/" class="back-button nav-link" data-page="home"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+                <a href="https://ayoubelouardy.github.io/Practicaejercicios/" target="_blank" class="back-button"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
                 <div class="section-title">
-                    <h2>Matemáticas</h2>
-                    <p>Selecciona un área de matemáticas para practicar</p>
+                    <h2>Ciencias</h2>
+                    <p>Selecciona un área de ciencias para practicar</p>
                 </div>
                 <div class="topics-grid">
-                    <div class="topic-card algebra">
-                        <div class="topic-icon">∑</div>
+                    <div class="topic-card physics">
+                        <div class="topic-icon">⚛️</div>
                         <div class="topic-content">
-                            <h3>Álgebra</h3>
-                            <p>Ecuaciones, polinomios, sistemas de ecuaciones y más.</p>
-                            <a href="#" class="btn btn-algebra practice-btn" data-subject="algebra">Practicar</a>
+                            <h3>Física</h3>
+                            <p>Mecánica, termodinámica, óptica y electricidad.</p>
+                            <a href="#" class="btn btn-physics practice-btn" data-subject="physics">Practicar</a>
                         </div>
                     </div>
-                    <div class="topic-card geometry">
-                        <div class="topic-icon">π</div>
+                    <div class="topic-card chemistry">
+                        <div class="topic-icon">🧪</div>
                         <div class="topic-content">
-                            <h3>Geometría</h3>
-                            <p>Ángulos, polígonos, trigonometría y teoremas.</p>
-                            <a href="#" class="btn btn-geometry practice-btn" data-subject="geometry">Practicar</a>
+                            <h3>Química</h3>
+                            <p>Reacciones químicas, estequiometría, y química orgánica.</p>
+                            <a href="#" class="btn btn-chemistry practice-btn" data-subject="chemistry">Practicar</a>
                         </div>
                     </div>
-                    <div class="topic-card calculus">
-                        <div class="topic-icon">∫</div>
+                    <div class="topic-card biology">
+                        <div class="topic-icon">🧬</div>
                         <div class="topic-content">
-                            <h3>Cálculo</h3>
-                            <p>Derivadas, integrales, límites y aplicaciones.</p>
-                            <a href="#" class="btn btn-calculus practice-btn" data-subject="calculus">Practicar</a>
-                        </div>
-                    </div>
-                    <div class="topic-card arithmetic">
-                        <div class="topic-icon">%</div>
-                        <div class="topic-content">
-                            <h3>Aritmética</h3>
-                            <p>Operaciones básicas, fracciones, porcentajes y proporciones.</p>
-                            <a href="#" class="btn btn-arithmetic practice-btn" data-subject="arithmetic">Practicar</a>
+                            <h3>Biología</h3>
+                            <p>Celular, genética, ecología y evolución.</p>
+                            <a href="#" class="btn btn-biology practice-btn" data-subject="biology">Practicar</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="subject-page" id="algebra-page">
+        <section class="subject-page" id="physics-page">
             <div class="container">
-                <a href="#" class="back-button nav-link" data-page="math"><i class="fas fa-arrow-left"></i> Volver a Matemáticas</a>
+                <a href="#" class="back-button nav-link" data-page="science"><i class="fas fa-arrow-left"></i> Volver a Ciencias</a>
                 <div class="section-title">
-                    <h2>Álgebra</h2>
-                    <p>Practica con más de 50 ejercicios de álgebra de diferentes niveles</p>
+                    <h2>Física</h2>
+                    <p>Practica con más de 50 ejercicios de física de diferentes niveles</p>
                 </div>
                 <div class="exercise-tabs">
-                    <div class="exercise-tab active" data-tab="algebra-basic">Básico</div>
-                    <div class="exercise-tab" data-tab="algebra-intermediate">Intermedio</div>
-                    <div class="exercise-tab" data-tab="algebra-advanced">Avanzado</div>
+                    <div class="exercise-tab active" data-tab="physics-basic">Básico</div>
+                    <div class="exercise-tab" data-tab="physics-intermediate">Intermedio</div>
+                    <div class="exercise-tab" data-tab="physics-advanced">Avanzado</div>
                 </div>
-                <div class="exercise-container active" id="algebra-basic-exercises">
+                <div class="exercise-container active" id="physics-basic-exercises">
                     <div class="exercise-header">
-                        <h3 class="exercise-title">Álgebra Básica: Ecuaciones Lineales</h3>
+                        <h3 class="exercise-title">Física Básica: Movimiento Rectilíneo</h3>
                         <div class="exercise-progress">
                             <i class="fas fa-star" style="color: gold; margin-right: 5px;"></i>
                             <span>Ejercicio <span class="exercise-counter">1</span> de 50</span>
@@ -891,14 +863,14 @@
                     </div>
                     <div class="exercise-question"></div>
                     <div class="options-container"></div>
-                    <button class="btn btn-algebra check-answer-btn">Comprobar respuesta</button>
-                    <button class="btn btn-algebra next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
+                    <button class="btn btn-physics check-answer-btn">Comprobar respuesta</button>
+                    <button class="btn btn-physics next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
                     <div class="exercise-feedback feedback-correct"></div>
                     <div class="exercise-feedback feedback-incorrect"></div>
                 </div>
-                <div class="exercise-container" id="algebra-intermediate-exercises">
+                <div class="exercise-container" id="physics-intermediate-exercises">
                     <div class="exercise-header">
-                        <h3 class="exercise-title">Álgebra Intermedia: Sistemas de Ecuaciones</h3>
+                        <h3 class="exercise-title">Física Intermedia: Leyes de Newton</h3>
                         <div class="exercise-progress">
                             <i class="fas fa-star" style="color: gold; margin-right: 5px;"></i>
                             <span>Ejercicio <span class="exercise-counter">1</span> de 50</span>
@@ -906,14 +878,14 @@
                     </div>
                     <div class="exercise-question"></div>
                     <div class="options-container"></div>
-                    <button class="btn btn-algebra check-answer-btn">Comprobar respuesta</button>
-                    <button class="btn btn-algebra next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
+                    <button class="btn btn-physics check-answer-btn">Comprobar respuesta</button>
+                    <button class="btn btn-physics next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
                     <div class="exercise-feedback feedback-correct"></div>
                     <div class="exercise-feedback feedback-incorrect"></div>
                 </div>
-                <div class="exercise-container" id="algebra-advanced-exercises">
+                <div class="exercise-container" id="physics-advanced-exercises">
                     <div class="exercise-header">
-                        <h3 class="exercise-title">Álgebra Avanzada: Ecuaciones Cuadráticas</h3>
+                        <h3 class="exercise-title">Física Avanzada: Electromagnetismo</h3>
                         <div class="exercise-progress">
                             <i class="fas fa-star" style="color: gold; margin-right: 5px;"></i>
                             <span>Ejercicio <span class="exercise-counter">1</span> de 50</span>
@@ -921,28 +893,28 @@
                     </div>
                     <div class="exercise-question"></div>
                     <div class="options-container"></div>
-                    <button class="btn btn-algebra check-answer-btn">Comprobar respuesta</button>
-                    <button class="btn btn-algebra next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
+                    <button class="btn btn-physics check-answer-btn">Comprobar respuesta</button>
+                    <button class="btn btn-physics next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
                     <div class="exercise-feedback feedback-correct"></div>
                     <div class="exercise-feedback feedback-incorrect"></div>
                 </div>
             </div>
         </section>
-        <section class="subject-page" id="geometry-page">
+        <section class="subject-page" id="chemistry-page">
             <div class="container">
-                <a href="#" class="back-button nav-link" data-page="math"><i class="fas fa-arrow-left"></i> Volver a Matemáticas</a>
+                <a href="#" class="back-button nav-link" data-page="science"><i class="fas fa-arrow-left"></i> Volver a Ciencias</a>
                 <div class="section-title">
-                    <h2>Geometría</h2>
-                    <p>Practica con más de 50 ejercicios de geometría de diferentes niveles</p>
+                    <h2>Química</h2>
+                    <p>Practica con más de 50 ejercicios de química de diferentes niveles</p>
                 </div>
                 <div class="exercise-tabs">
-                    <div class="exercise-tab active" data-tab="geometry-basic">Básico</div>
-                    <div class="exercise-tab" data-tab="geometry-intermediate">Intermedio</div>
-                    <div class="exercise-tab" data-tab="geometry-advanced">Avanzado</div>
+                    <div class="exercise-tab active" data-tab="chemistry-basic">Básico</div>
+                    <div class="exercise-tab" data-tab="chemistry-intermediate">Intermedio</div>
+                    <div class="exercise-tab" data-tab="chemistry-advanced">Avanzado</div>
                 </div>
-                <div class="exercise-container active" id="geometry-basic-exercises">
+                <div class="exercise-container active" id="chemistry-basic-exercises">
                     <div class="exercise-header">
-                        <h3 class="exercise-title">Geometría Básica: Área de Figuras</h3>
+                        <h3 class="exercise-title">Química Básica: Tabla Periódica</h3>
                         <div class="exercise-progress">
                             <i class="fas fa-star" style="color: gold; margin-right: 5px;"></i>
                             <span>Ejercicio <span class="exercise-counter">1</span> de 50</span>
@@ -950,14 +922,14 @@
                     </div>
                     <div class="exercise-question"></div>
                     <div class="options-container"></div>
-                    <button class="btn btn-geometry check-answer-btn">Comprobar respuesta</button>
-                    <button class="btn btn-geometry next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
+                    <button class="btn btn-chemistry check-answer-btn">Comprobar respuesta</button>
+                    <button class="btn btn-chemistry next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
                     <div class="exercise-feedback feedback-correct"></div>
                     <div class="exercise-feedback feedback-incorrect"></div>
                 </div>
-                <div class="exercise-container" id="geometry-intermediate-exercises">
+                <div class="exercise-container" id="chemistry-intermediate-exercises">
                     <div class="exercise-header">
-                        <h3 class="exercise-title">Geometría Intermedia: Teorema de Pitágoras</h3>
+                        <h3 class="exercise-title">Química Intermedia: Reacciones Químicas</h3>
                         <div class="exercise-progress">
                             <i class="fas fa-star" style="color: gold; margin-right: 5px;"></i>
                             <span>Ejercicio <span class="exercise-counter">1</span> de 50</span>
@@ -965,14 +937,14 @@
                     </div>
                     <div class="exercise-question"></div>
                     <div class="options-container"></div>
-                    <button class="btn btn-geometry check-answer-btn">Comprobar respuesta</button>
-                    <button class="btn btn-geometry next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
+                    <button class="btn btn-chemistry check-answer-btn">Comprobar respuesta</button>
+                    <button class="btn btn-chemistry next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
                     <div class="exercise-feedback feedback-correct"></div>
                     <div class="exercise-feedback feedback-incorrect"></div>
                 </div>
-                <div class="exercise-container" id="geometry-advanced-exercises">
+                <div class="exercise-container" id="chemistry-advanced-exercises">
                     <div class="exercise-header">
-                        <h3 class="exercise-title">Geometría Avanzada: Trigonometría</h3>
+                        <h3 class="exercise-title">Química Avanzada: Estequiometría</h3>
                         <div class="exercise-progress">
                             <i class="fas fa-star" style="color: gold; margin-right: 5px;"></i>
                             <span>Ejercicio <span class="exercise-counter">1</span> de 50</span>
@@ -980,58 +952,28 @@
                     </div>
                     <div class="exercise-question"></div>
                     <div class="options-container"></div>
-                    <button class="btn btn-geometry check-answer-btn">Comprobar respuesta</button>
-                    <button class="btn btn-geometry next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
+                    <button class="btn btn-chemistry check-answer-btn">Comprobar respuesta</button>
+                    <button class="btn btn-chemistry next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
                     <div class="exercise-feedback feedback-correct"></div>
                     <div class="exercise-feedback feedback-incorrect"></div>
                 </div>
             </div>
         </section>
-        <section class="subject-page" id="calculus-page">
+        <section class="subject-page" id="biology-page">
             <div class="container">
-                <a href="#" class="back-button nav-link" data-page="math"><i class="fas fa-arrow-left"></i> Volver a Matemáticas</a>
+                <a href="#" class="back-button nav-link" data-page="science"><i class="fas fa-arrow-left"></i> Volver a Ciencias</a>
                 <div class="section-title">
-                    <h2>Cálculo</h2>
-                    <p>Practica con más de 50 ejercicios de cálculo de diferentes niveles</p>
+                    <h2>Biología</h2>
+                    <p>Practica con más de 50 ejercicios de biología de diferentes niveles</p>
                 </div>
                 <div class="exercise-tabs">
-                    <div class="exercise-tab active" data-tab="calculus-basic">Básico</div>
-                    <div class="exercise-tab" data-tab="calculus-intermediate">Intermedio</div>
-                    <div class="exercise-tab" data-tab="calculus-advanced">Avanzado</div>
+                    <div class="exercise-tab active" data-tab="biology-basic">Básico</div>
+                    <div class="exercise-tab" data-tab="biology-intermediate">Intermedio</div>
+                    <div class="exercise-tab" data-tab="biology-advanced">Avanzado</div>
                 </div>
-                <div class="exercise-container active" id="calculus-basic-exercises">
+                <div class="exercise-container active" id="biology-basic-exercises">
                     <div class="exercise-header">
-                        <h3 class="exercise-title">Cálculo Básico: Derivadas</h3>
-                        <div class="exercise-progress">
-                            <i class="fas fa-star" style="color: gold; margin-right: 5px;"></i>
-                            <span>Ejercicio <span class="exercise-counter">1</span> de 50</span>
-                        </div>
-                    </div>
-                    <div class="exercise-question"></div>
-                    <input type="text" class="input-answer" placeholder="Escribe tu respuesta aquí">
-                    <button class="btn btn-calculus check-answer-btn">Comprobar respuesta</button>
-                    <button class="btn btn-calculus next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
-                    <div class="exercise-feedback feedback-correct"></div>
-                    <div class="exercise-feedback feedback-incorrect"></div>
-                </div>
-                <div class="exercise-container" id="calculus-intermediate-exercises">
-                    <div class="exercise-header">
-                        <h3 class="exercise-title">Cálculo Intermedio: Integrales</h3>
-                        <div class="exercise-progress">
-                            <i class="fas fa-star" style="color: gold; margin-right: 5px;"></i>
-                            <span>Ejercicio <span class="exercise-counter">1</span> de 50</span>
-                        </div>
-                    </div>
-                    <div class="exercise-question"></div>
-                    <input type="text" class="input-answer" placeholder="Escribe tu respuesta aquí">
-                    <button class="btn btn-calculus check-answer-btn">Comprobar respuesta</button>
-                    <button class="btn btn-calculus next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
-                    <div class="exercise-feedback feedback-correct"></div>
-                    <div class="exercise-feedback feedback-incorrect"></div>
-                </div>
-                <div class="exercise-container" id="calculus-advanced-exercises">
-                    <div class="exercise-header">
-                        <h3 class="exercise-title">Cálculo Avanzado: Límites</h3>
+                        <h3 class="exercise-title">Biología Básica: Células</h3>
                         <div class="exercise-progress">
                             <i class="fas fa-star" style="color: gold; margin-right: 5px;"></i>
                             <span>Ejercicio <span class="exercise-counter">1</span> de 50</span>
@@ -1039,96 +981,70 @@
                     </div>
                     <div class="exercise-question"></div>
                     <div class="options-container"></div>
-                    <button class="btn btn-calculus check-answer-btn">Comprobar respuesta</button>
-                    <button class="btn btn-calculus next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
+                    <button class="btn btn-biology check-answer-btn">Comprobar respuesta</button>
+                    <button class="btn btn-biology next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
+                    <div class="exercise-feedback feedback-correct"></div>
+                    <div class="exercise-feedback feedback-incorrect"></div>
+                </div>
+                <div class="exercise-container" id="biology-intermediate-exercises">
+                    <div class="exercise-header">
+                        <h3 class="exercise-title">Biología Intermedia: Genética</h3>
+                        <div class="exercise-progress">
+                            <i class="fas fa-star" style="color: gold; margin-right: 5px;"></i>
+                            <span>Ejercicio <span class="exercise-counter">1</span> de 50</span>
+                        </div>
+                    </div>
+                    <div class="exercise-question"></div>
+                    <div class="options-container"></div>
+                    <button class="btn btn-biology check-answer-btn">Comprobar respuesta</button>
+                    <button class="btn btn-biology next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
+                    <div class="exercise-feedback feedback-correct"></div>
+                    <div class="exercise-feedback feedback-incorrect"></div>
+                </div>
+                <div class="exercise-container" id="biology-advanced-exercises">
+                    <div class="exercise-header">
+                        <h3 class="exercise-title">Biología Avanzada: Ecología</h3>
+                        <div class="exercise-progress">
+                            <i class="fas fa-star" style="color: gold; margin-right: 5px;"></i>
+                            <span>Ejercicio <span class="exercise-counter">1</span> de 50</span>
+                        </div>
+                    </div>
+                    <div class="exercise-question"></div>
+                    <div class="options-container"></div>
+                    <button class="btn btn-biology check-answer-btn">Comprobar respuesta</button>
+                    <button class="btn btn-biology next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
                     <div class="exercise-feedback feedback-correct"></div>
                     <div class="exercise-feedback feedback-incorrect"></div>
                 </div>
             </div>
         </section>
-        <section class="subject-page" id="arithmetic-page">
+        <section class="subject-page" id="math-page">
             <div class="container">
-                <a href="#" class="back-button nav-link" data-page="math"><i class="fas fa-arrow-left"></i> Volver a Matemáticas</a>
+                <a href="https://ayoubelouardy.github.io/Practicaejercicios-Matem-ticas/" target="_blank" class="back-button"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
                 <div class="section-title">
-                    <h2>Aritmética</h2>
-                    <p>Practica con más de 50 ejercicios de aritmética de diferentes niveles</p>
-                </div>
-                <div class="exercise-tabs">
-                    <div class="exercise-tab active" data-tab="arithmetic-basic">Básico</div>
-                    <div class="exercise-tab" data-tab="arithmetic-intermediate">Intermedio</div>
-                    <div class="exercise-tab" data-tab="arithmetic-advanced">Avanzado</div>
-                </div>
-                <div class="exercise-container active" id="arithmetic-basic-exercises">
-                    <div class="exercise-header">
-                        <h3 class="exercise-title">Aritmética Básica: Fracciones</h3>
-                        <div class="exercise-progress">
-                            <i class="fas fa-star" style="color: gold; margin-right: 5px;"></i>
-                            <span>Ejercicio <span class="exercise-counter">1</span> de 50</span>
-                        </div>
-                    </div>
-                    <div class="exercise-question"></div>
-                    <div class="options-container"></div>
-                    <button class="btn btn-arithmetic check-answer-btn">Comprobar respuesta</button>
-                    <button class="btn btn-arithmetic next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
-                    <div class="exercise-feedback feedback-correct"></div>
-                    <div class="exercise-feedback feedback-incorrect"></div>
-                </div>
-                <div class="exercise-container" id="arithmetic-intermediate-exercises">
-                    <div class="exercise-header">
-                        <h3 class="exercise-title">Aritmética Intermedia: Porcentajes</h3>
-                        <div class="exercise-progress">
-                            <i class="fas fa-star" style="color: gold; margin-right: 5px;"></i>
-                            <span>Ejercicio <span class="exercise-counter">1</span> de 50</span>
-                        </div>
-                    </div>
-                    <div class="exercise-question"></div>
-                    <div class="options-container"></div>
-                    <button class="btn btn-arithmetic check-answer-btn">Comprobar respuesta</button>
-                    <button class="btn btn-arithmetic next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
-                    <div class="exercise-feedback feedback-correct"></div>
-                    <div class="exercise-feedback feedback-incorrect"></div>
-                </div>
-                <div class="exercise-container" id="arithmetic-advanced-exercises">
-                    <div class="exercise-header">
-                        <h3 class="exercise-title">Aritmética Avanzada: Proporciones</h3>
-                        <div class="exercise-progress">
-                            <i class="fas fa-star" style="color: gold; margin-right: 5px;"></i>
-                            <span>Ejercicio <span class="exercise-counter">1</span> de 50</span>
-                        </div>
-                    </div>
-                    <div class="exercise-question"></div>
-                    <div class="options-container"></div>
-                    <button class="btn btn-arithmetic check-answer-btn">Comprobar respuesta</button>
-                    <button class="btn btn-arithmetic next-question-btn" style="display: none; background-color: var(--success-color);">Siguiente ejercicio</button>
-                    <div class="exercise-feedback feedback-correct"></div>
-                    <div class="exercise-feedback feedback-incorrect"></div>
+                    <h2>Matemáticas</h2>
+                    <p>Visita nuestra página de Matemáticas para practicar</p>
+                    <a href="https://ayoubelouardy.github.io/Practicaejercicios-Matem-ticas/" target="_blank" class="btn btn-physics">Ir a Matemáticas</a>
                 </div>
             </div>
         </section>
         <section class="subject-page" id="language-page">
             <div class="container">
-                <a href="https://ayoubelouardy.github.io/Practicaejercicios/" class="back-button nav-link" data-page="home"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+                <a href="https://ayoubelouardy.github.io/Practicaejercicios-Lengua-Castellana/" target="_blank" class="back-button"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
                 <div class="section-title">
                     <h2>Lenguaje</h2>
-                    <p>Próximamente: Ejercicios de lenguaje</p>
-                </div>
-            </div>
-        </section>
-        <section class="subject-page" id="science-page">
-            <div class="container">
-                <a href="https://ayoubelouardy.github.io/Practicaejercicios/" class="back-button nav-link" data-page="home"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
-                <div class="section-title">
-                    <h2>Ciencias</h2>
-                    <p>Próximamente: Ejercicios de ciencias</p>
+                    <p>Visita nuestra página de Lenguaje para practicar</p>
+                    <a href="https://ayoubelouardy.github.io/Practicaejercicios-Lengua-Castellana/" target="_blank" class="btn btn-physics">Ir a Lenguaje</a>
                 </div>
             </div>
         </section>
         <section class="subject-page" id="social-page">
             <div class="container">
-                <a href="https://ayoubelouardy.github.io/Practicaejercicios/" class="back-button nav-link" data-page="home"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+                <a href="https://ayoubelouardy.github.io/Practicaejercicios/" target="_blank" class="back-button"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
                 <div class="section-title">
                     <h2>Sociales</h2>
-                    <p>Próximamente: Ejercicios de sociales</p>
+                    <p>Visita nuestra página de Ciencias Sociales para practicar</p>
+                    <a href="https://ayoubelouardy.github.io/Practicaejercicios-Ciencias-Sociales/" target="_blank" class="btn btn-physics">Ir a Sociales</a>
                 </div>
             </div>
         </section>
@@ -1149,7 +1065,7 @@
                     <label for="password">Contraseña</label>
                     <input type="password" id="password" required placeholder="Tu contraseña">
                 </div>
-                <button type="submit" class="btn btn-math">Iniciar Sesión</button>
+                <button type="submit" class="btn btn-physics">Iniciar Sesión</button>
                 <div class="form-footer">
                     <p>¿No tienes cuenta? <a href="#" id="registerLink">Regístrate aquí</a></p>
                 </div>
@@ -1167,20 +1083,19 @@
                 <div class="footer-column">
                     <h3>Enlaces rápidos</h3>
                     <ul>
-                        <li><a href="https://ayoubelouardy.github.io/Practicaejercicios/" class="nav-link" data-page="home">Inicio</a></li>
-                        <li><a href="#" class="nav-link" data-page="math">Matemáticas</a></li>
-                        <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Lengua-Castellana/">Lenguaje</a></li>
-                        <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Ciencias/" class="nav-link" data-page="science">Ciencias</a></li>
-                        <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Ciencias-Sociales/" class="nav-link">Sociales</a></li>
+                        <li><a href="https://ayoubelouardy.github.io/Practicaejercicios/" target="_blank">Inicio</a></li>
+                        <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Lengua-Castellana/" target="_blank">Lenguaje</a></li>
+                        <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Matem-ticas/" target="_blank">Matemáticas</a></li>
+                        <li><a href="#" class="nav-link" data-page="science">Ciencias</a></li>
+                        <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Ciencias-Sociales/" target="_blank">Sociales</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Matemáticas</h3>
+                    <h3>Ciencias</h3>
                     <ul>
-                        <li><a href="#" class="practice-btn" data-subject="algebra">Álgebra</a></li>
-                        <li><a href="#" class="practice-btn" data-subject="geometry">Geometría</a></li>
-                        <li><a href="#" class="practice-btn" data-subject="calculus">Cálculo</a></li>
-                        <li><a href="#" class="practice-btn" data-subject="arithmetic">Aritmética</a></li>
+                        <li><a href="#" class="practice-btn" data-subject="physics">Física</a></li>
+                        <li><a href="#" class="practice-btn" data-subject="chemistry">Química</a></li>
+                        <li><a href="#" class="practice-btn" data-subject="biology">Biología</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1211,208 +1126,172 @@
 
         // Exercise data (50+ per category and level)
         const exercises = {
-            algebra: {
+            physics: {
                 basic: Array.from({ length: 50 }, (_, i) => ({
                     id: i + 1,
-                    question: `Resuelve la ecuación: <strong>${i % 2 === 0 ? `3x - 7 = 8` : `2x + 5 = 13`}</strong>`,
+                    question: `Calcula la velocidad de un objeto que recorre <strong>${i % 2 === 0 ? '100 m en 20 s' : '200 m en 50 s'}</strong>.`,
                     options: i % 2 === 0 ? [
-                        { text: "x = 4", correct: false },
-                        { text: "x = 6", correct: false },
-                        { text: "x = 5", correct: true },
-                        { text: "x = 3", correct: false }
+                        { text: "5 m/s", correct: true },
+                        { text: "10 m/s", correct: false },
+                        { text: "2 m/s", correct: false },
+                        { text: "20 m/s", correct: false }
                     ] : [
-                        { text: "x = 3", correct: false },
-                        { text: "x = 5", correct: false },
-                        { text: "x = 4", correct: true },
-                        { text: "x = 6", correct: false }
+                        { text: "4 m/s", correct: true },
+                        { text: "8 m/s", correct: false },
+                        { text: "5 m/s", correct: false },
+                        { text: "10 m/s", correct: false }
                     ],
-                    feedbackCorrect: `¡Correcto! Has resuelto bien la ecuación.`,
-                    feedbackIncorrect: `Incorrecto. La solución correcta es ${i % 2 === 0 ? 'x = 5' : 'x = 4'}.`
+                    feedbackCorrect: `¡Correcto! Velocidad = distancia / tiempo = ${i % 2 === 0 ? '100 / 20 = 5 m/s' : '200 / 50 = 4 m/s'}.`,
+                    feedbackIncorrect: `Incorrecto. Usa la fórmula: velocidad = distancia / tiempo.`
                 })),
                 intermediate: Array.from({ length: 50 }, (_, i) => ({
                     id: i + 1,
-                    question: `Resuelve el sistema: <strong>${i % 2 === 0 ? `2x + y = 5, x - y = 1` : `3x + 2y = 8, x - y = 2`}</strong>`,
+                    question: `Un objeto de 2 kg experimenta una fuerza de <strong>${i % 2 === 0 ? '10 N' : '20 N'}</strong>. Calcula la aceleración.`,
                     options: i % 2 === 0 ? [
-                        { text: "x = 2, y = 1", correct: true },
-                        { text: "x = 1, y = 2", correct: false },
-                        { text: "x = 3, y = -1", correct: false },
-                        { text: "x = 0, y = 5", correct: false }
+                        { text: "5 m/s²", correct: true },
+                        { text: "10 m/s²", correct: false },
+                        { text: "2 m/s²", correct: false },
+                        { text: "20 m/s²", correct: false }
                     ] : [
-                        { text: "x = 2, y = 1", correct: false },
-                        { text: "x = 3, y = 1", correct: true },
-                        { text: "x = 4, y = 2", correct: false },
-                        { text: "x = 1, y = 3", correct: false }
+                        { text: "10 m/s²", correct: true },
+                        { text: "5 m/s²", correct: false },
+                        { text: "15 m/s²", correct: false },
+                        { text: "4 m/s²", correct: false }
                     ],
-                    feedbackCorrect: `¡Correcto! La solución es ${i % 2 === 0 ? 'x = 2, y = 1' : 'x = 3, y = 1'}.`,
-                    feedbackIncorrect: `Incorrecto. La solución correcta es ${i % 2 === 0 ? 'x = 2, y = 1' : 'x = 3, y = 1'}.`
+                    feedbackCorrect: `¡Correcto! Aceleración = fuerza / masa = ${i % 2 === 0 ? '10 / 2 = 5 m/s²' : '20 / 2 = 10 m/s²'}.`,
+                    feedbackIncorrect: `Incorrecto. Usa la segunda ley de Newton: F = m × a.`
                 })),
                 advanced: Array.from({ length: 50 }, (_, i) => ({
                     id: i + 1,
-                    question: `Resuelve: <strong>${i % 2 === 0 ? `x² - 5x + 6 = 0` : `x² - 3x - 4 = 0`}</strong>`,
+                    question: `Calcula el campo eléctrico en un punto a <strong>${i % 2 === 0 ? '2 m' : '3 m'}</strong> de una carga de 2 μC.`,
                     options: i % 2 === 0 ? [
-                        { text: "x = 2, x = 3", correct: true },
-                        { text: "x = 1, x = 5", correct: false },
-                        { text: "x = -2, x = -3", correct: false },
-                        { text: "x = 0, x = 6", correct: false }
+                        { text: "4.5 × 10³ N/C", correct: true },
+                        { text: "9 × 10³ N/C", correct: false },
+                        { text: "2.25 × 10³ N/C", correct: false },
+                        { text: "18 × 10³ N/C", correct: false }
                     ] : [
-                        { text: "x = -1, x = 4", correct: true },
-                        { text: "x = 1, x = 3", correct: false },
-                        { text: "x = -2, x = 2", correct: false },
-                        { text: "x = 0, x = 4", correct: false }
+                        { text: "2 × 10³ N/C", correct: true },
+                        { text: "4 × 10³ N/C", correct: false },
+                        { text: "1 × 10³ N/C", correct: false },
+                        { text: "6 × 10³ N/C", correct: false }
                     ],
-                    feedbackCorrect: `¡Correcto! Las soluciones son ${i % 2 === 0 ? 'x = 2, x = 3' : 'x = -1, x = 4'}.`,
-                    feedbackIncorrect: `Incorrecto. Las soluciones correctas son ${i % 2 === 0 ? 'x = 2, x = 3' : 'x = -1, x = 4'}.`
+                    feedbackCorrect: `¡Correcto! E = k × q / r², donde k = 9 × 10⁹ N·m²/C².`,
+                    feedbackIncorrect: `Incorrecto. Usa la fórmula del campo eléctrico: E = k × q / r².`
                 }))
             },
-            geometry: {
+            chemistry: {
                 basic: Array.from({ length: 50 }, (_, i) => ({
                     id: i + 1,
-                    question: `Calcula el área de un ${i % 2 === 0 ? `triángulo con base de 6 cm y altura de 4 cm` : `círculo con radio de 5 cm (usa π = 3.14)`}`,
-                    options: i % 2 === 0 ? [
-                        { text: "10 cm²", correct: false },
-                        { text: "24 cm²", correct: false },
-                        { text: "12 cm²", correct: true },
-                        { text: "20 cm²", correct: false }
-                    ] : [
-                        { text: "31.4 cm²", correct: false },
-                        { text: "78.5 cm²", correct: true },
-                        { text: "15.7 cm²", correct: false },
-                        { text: "62.8 cm²", correct: false }
-                    ],
-                    feedbackCorrect: `¡Correcto! El área es ${i % 2 === 0 ? '12 cm²' : '78.5 cm²'}.`,
-                    feedbackIncorrect: `Incorrecto. ${i % 2 === 0 ? 'El área del triángulo es base × altura / 2' : 'El área del círculo es πr²'}.`
-                })),
-                intermediate: Array.from({ length: 50 }, (_, i) => ({
-                    id: i + 1,
-                    question: `En un triángulo rectángulo, los catetos miden ${i % 2 === 0 ? `3 cm y 4 cm` : `5 cm y 12 cm`}. Calcula la hipotenusa.`,
-                    options: i % 2 === 0 ? [
-                        { text: "5 cm", correct: true },
-                        { text: "7 cm", correct: false },
-                        { text: "6 cm", correct: false },
-                        { text: "8 cm", correct: false }
-                    ] : [
-                        { text: "13 cm", correct: true },
-                        { text: "15 cm", correct: false },
-                        { text: "10 cm", correct: false },
-                        { text: "17 cm", correct: false }
-                    ],
-                    feedbackCorrect: `¡Correcto! La hipotenusa es ${i % 2 === 0 ? '5 cm' : '13 cm'}.`,
-                    feedbackIncorrect: `Incorrecto. Usa el teorema de Pitágoras: a² + b² = c².`
-                })),
-                advanced: Array.from({ length: 50 }, (_, i) => ({
-                    id: i + 1,
-                    question: `Calcula el ${i % 2 === 0 ? `seno de 30°` : `coseno de 60°`}.`,
-                    options: i % 2 === 0 ? [
-                        { text: "1/2", correct: true },
-                        { text: "√3/2", correct: false },
-                        { text: "1", correct: false },
-                        { text: "0", correct: false }
-                    ] : [
-                        { text: "1/2", correct: true },
-                        { text: "√3/2", correct: false },
-                        { text: "1", correct: false },
-                        { text: "0", correct: false }
-                    ],
-                    feedbackCorrect: `¡Correcto! El valor es 1/2.`,
-                    feedbackIncorrect: `Incorrecto. El valor correcto es 1/2.`
-                }))
-            },
-            calculus: {
-                basic: Array.from({ length: 50 }, (_, i) => ({
-                    id: i + 1,
-                    question: `Calcula la derivada de f(x) = ${i % 2 === 0 ? `3x² + 2x - 5` : `4x³ - 3x² + 2x - 1`}`,
-                    answer: i % 2 === 0 ? "6x + 2" : "12x² - 6x + 2",
-                    feedbackCorrect: `¡Correcto! La derivada es ${i % 2 === 0 ? '6x + 2' : '12x² - 6x + 2'}.`,
-                    feedbackIncorrect: `Incorrecto. La derivada correcta es ${i % 2 === 0 ? '6x + 2' : '12x² - 6x + 2'}.`
-                })),
-                intermediate: Array.from({ length: 50 }, (_, i) => ({
-                    id: i + 1,
-                    question: `Calcula la integral de f(x) = ${i % 2 === 0 ? `4x³` : `3x²`}`,
-                    answer: i % 2 === 0 ? "x^4 + C" : "x^3 + C",
-                    feedbackCorrect: `¡Correcto! La integral es ${i % 2 === 0 ? 'x⁴ + C' : 'x³ + C'}.`,
-                    feedbackIncorrect: `Incorrecto. La integral correcta es ${i % 2 === 0 ? 'x⁴ + C' : 'x³ + C'}.`
-                })),
-                advanced: Array.from({ length: 50 }, (_, i) => ({
-                    id: i + 1,
-                    question: `Calcula el límite: lim(x→0) (${i % 2 === 0 ? `sin(x)/x` : `(1 - cos(x))/x²`})`,
+                    question: `¿Cuál es el número atómico del <strong>${i % 2 === 0 ? 'Hidrógeno' : 'Oxígeno'}</strong>?`,
                     options: i % 2 === 0 ? [
                         { text: "1", correct: true },
-                        { text: "0", correct: false },
-                        { text: "∞", correct: false },
-                        { text: "No existe", correct: false }
+                        { text: "2", correct: false },
+                        { text: "3", correct: false },
+                        { text: "4", correct: false }
                     ] : [
-                        { text: "1/2", correct: true },
-                        { text: "1", correct: false },
-                        { text: "0", correct: false },
-                        { text: "No existe", correct: false }
+                        { text: "8", correct: true },
+                        { text: "6", correct: false },
+                        { text: "7", correct: false },
+                        { text: "9", correct: false }
                     ],
-                    feedbackCorrect: `¡Correcto! El límite es ${i % 2 === 0 ? '1' : '1/2'}.`,
-                    feedbackIncorrect: `Incorrecto. El límite correcto es ${i % 2 === 0 ? '1' : '1/2'}.`
-                }))
-            },
-            arithmetic: {
-                basic: Array.from({ length: 50 }, (_, i) => ({
-                    id: i + 1,
-                    question: `Simplifica la fracción: ${i % 2 === 0 ? `18/24` : `15/25`}`,
-                    options: i % 2 === 0 ? [
-                        { text: "6/8", correct: false },
-                        { text: "9/12", correct: false },
-                        { text: "3/4", correct: true },
-                        { text: "2/3", correct: false }
-                    ] : [
-                        { text: "5/8", correct: false },
-                        { text: "3/5", correct: true },
-                        { text: "6/10", correct: false },
-                        { text: "4/5", correct: false }
-                    ],
-                    feedbackCorrect: `¡Correcto! La fracción simplificada es ${i % 2 === 0 ? '3/4' : '3/5'}.`,
-                    feedbackIncorrect: `Incorrecto. El máximo común divisor da ${i % 2 === 0 ? '3/4' : '3/5'}.`
+                    feedbackCorrect: `¡Correcto! El número atómico del ${i % 2 === 0 ? 'Hidrógeno es 1' : 'Oxígeno es 8'}.`,
+                    feedbackIncorrect: `Incorrecto. Consulta la tabla periódica para el número atómico.`
                 })),
                 intermediate: Array.from({ length: 50 }, (_, i) => ({
                     id: i + 1,
-                    question: `¿Cuánto es el ${i % 2 === 0 ? `20% de 150` : `15% de 200`}?`,
+                    question: `Balancea la reacción: <strong>${i % 2 === 0 ? 'H₂ + O₂ → H₂O' : 'CH₄ + O₂ → CO₂ + H₂O'}</strong>.`,
                     options: i % 2 === 0 ? [
-                        { text: "30", correct: true },
-                        { text: "20", correct: false },
-                        { text: "15", correct: false },
-                        { text: "25", correct: false }
+                        { text: "2H₂ + O₂ → 2H₂O", correct: true },
+                        { text: "H₂ + O₂ → H₂O", correct: false },
+                        { text: "2H₂ + 2O₂ → 2H₂O", correct: false },
+                        { text: "H₂ + O₂ → 2H₂O", correct: false }
                     ] : [
-                        { text: "30", correct: true },
-                        { text: "25", correct: false },
-                        { text: "20", correct: false },
-                        { text: "35", correct: false }
+                        { text: "CH₄ + 2O₂ → CO₂ + 2H₂O", correct: true },
+                        { text: "CH₄ + O₂ → CO₂ + H₂O", correct: false },
+                        { text: "2CH₄ + O₂ → CO₂ + H₂O", correct: false },
+                        { text: "CH₄ + O₂ → 2CO₂ + H₂O", correct: false }
                     ],
-                    feedbackCorrect: `¡Correcto! El resultado es ${i % 2 === 0 ? '30' : '30'}.`,
-                    feedbackIncorrect: `Incorrecto. Calcula: ${i % 2 === 0 ? '(20/100) × 150 = 30' : '(15/100) × 200 = 30'}.`
+                    feedbackCorrect: `¡Correcto! La reacción balanceada es ${i % 2 === 0 ? '2H₂ + O₂ → 2H₂O' : 'CH₄ + 2O₂ → CO₂ + 2H₂O'}.`,
+                    feedbackIncorrect: `Incorrecto. Asegúrate de que el número de átomos sea igual en ambos lados.`
                 })),
                 advanced: Array.from({ length: 50 }, (_, i) => ({
                     id: i + 1,
-                    question: `Si ${i % 2 === 0 ? `3 kg de manzanas cuestan $12` : `5 kg de naranjas cuestan $20`}, ¿cuánto cuestan ${i % 2 === 0 ? `5 kg` : `8 kg`}?`,
+                    question: `Calcula la masa molar de <strong>${i % 2 === 0 ? 'CO₂' : 'H₂SO₄'}</strong>.`,
                     options: i % 2 === 0 ? [
-                        { text: "$20", correct: true },
-                        { text: "$15", correct: false },
-                        { text: "$18", correct: false },
-                        { text: "$25", correct: false }
+                        { text: "44 g/mol", correct: true },
+                        { text: "32 g/mol", correct: false },
+                        { text: "48 g/mol", correct: false },
+                        { text: "40 g/mol", correct: false }
                     ] : [
-                        { text: "$32", correct: true },
-                        { text: "$28", correct: false },
-                        { text: "$30", correct: false },
-                        { text: "$35", correct: false }
+                        { text: "98 g/mol", correct: true },
+                        { text: "90 g/mol", correct: false },
+                        { text: "100 g/mol", correct: false },
+                        { text: "96 g/mol", correct: false }
                     ],
-                    feedbackCorrect: `¡Correcto! El costo es ${i % 2 === 0 ? '$20' : '$32'}.`,
-                    feedbackIncorrect: `Incorrecto. Usa la proporción: ${i % 2 === 0 ? '(12/3) × 5 = $20' : '(20/5) × 8 = $32'}.`
+                    feedbackCorrect: `¡Correcto! La masa molar es ${i % 2 === 0 ? '44 g/mol (12 + 2×16)' : '98 g/mol (2×1 + 32 + 4×16)'}.`,
+                    feedbackIncorrect: `Incorrecto. Suma las masas atómicas de los elementos en la molécula.`
+                }))
+            },
+            biology: {
+                basic: Array.from({ length: 50 }, (_, i) => ({
+                    id: i + 1,
+                    question: `¿Cuál es la función principal de <strong>${i % 2 === 0 ? 'la mitocondria' : 'el núcleo'}</strong>?`,
+                    options: i % 2 === 0 ? [
+                        { text: "Producción de energía", correct: true },
+                        { text: "Almacenar ADN", correct: false },
+                        { text: "Síntesis de proteínas", correct: false },
+                        { text: "Transporte de sustancias", correct: false }
+                    ] : [
+                        { text: "Almacenar ADN", correct: true },
+                        { text: "Producción de energía", correct: false },
+                        { text: "Síntesis de proteínas", correct: false },
+                        { text: "Transporte de sustancias", correct: false }
+                    ],
+                    feedbackCorrect: `¡Correcto! ${i % 2 === 0 ? 'La mitocondria produce energía' : 'El núcleo almacena ADN'}.`,
+                    feedbackIncorrect: `Incorrecto. Revisa las funciones de los orgánulos celulares.`
+                })),
+                intermediate: Array.from({ length: 50 }, (_, i) => ({
+                    id: i + 1,
+                    question: `En un cruce genético Aa × Aa, ¿cuál es la probabilidad de obtener un genotipo <strong>aa</strong>?`,
+                    options: [
+                        { text: "25%", correct: true },
+                        { text: "50%", correct: false },
+                        { text: "75%", correct: false },
+                        { text: "0%", correct: false }
+                    ],
+                    feedbackCorrect: `¡Correcto! La probabilidad es 25% según el cuadro de Punnett.`,
+                    feedbackIncorrect: `Incorrecto. Usa un cuadro de Punnett para determinar las probabilidades.`
+                })),
+                advanced: Array.from({ length: 50 }, (_, i) => ({
+                    id: i + 1,
+                    question: `¿Cuál es el proceso principal de <strong>${i % 2 === 0 ? 'la fotosíntesis' : 'la respiración celular'}</strong>?`,
+                    options: i % 2 === 0 ? [
+                        { text: "Convertir luz en energía química", correct: true },
+                        { text: "Producir ATP a partir de glucosa", correct: false },
+                        { text: "Sintetizar proteínas", correct: false },
+                        { text: "Transportar oxígeno", correct: false }
+                    ] : [
+                        { text: "Producir ATP a partir de glucosa", correct: true },
+                        { text: "Convertir luz en energía química", correct: false },
+                        { text: "Sintetizar proteínas", correct: false },
+                        { text: "Transportar oxígeno", correct: false }
+                    ],
+                    feedbackCorrect: `¡Correcto! ${i % 2 === 0 ? 'La fotosíntesis convierte luz en energía química' : 'La respiración celular produce ATP'}.`,
+                    feedbackIncorrect: `Incorrecto. Revisa los procesos metabólicos de las células.`
                 }))
             }
         };
 
         // Navigation handling
         function showPage(pageId) {
+            // Skip external links as they are handled by href
+            if (['math', 'language', 'social'].includes(pageId)) return;
             document.querySelectorAll('.subject-page').forEach(page => {
                 page.classList.remove('active');
             });
             document.querySelector(`#${pageId}-page`).classList.add('active');
             // Initialize exercises for subject pages
-            if (['algebra', 'geometry', 'calculus', 'arithmetic'].includes(pageId)) {
+            if (['physics', 'chemistry', 'biology'].includes(pageId)) {
                 showSubject(pageId);
             }
         }
@@ -1474,23 +1353,26 @@
             });
         }
 
+        function updateUserStats() {
+            document.getElementById('completedExercises').textContent = userData.completedExercises;
+            document.getElementById('correctAnswers').textContent = userData.totalAnswers > 0 
+                ? `${Math.round((userData.correctAnswers / userData.totalAnswers) * 100)}%` 
+                : '0%';
+            document.getElementById('userName').textContent = userData.name;
+            document.getElementById('userEmail').textContent = userData.email || 'No has iniciado sesión';
+        }
+
         // Event listeners
         document.addEventListener('DOMContentLoaded', () => {
             // Initialize home page
             showPage('home');
 
-            // Navigation links
+            // Navigation links (only for internal pages)
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
                     const page = link.dataset.page;
-                    if (['home', 'science'].includes(page)) {
-                        window.location.href = link.getAttribute('href');
-                    } else if (!page) {
-                        window.location.href = link.getAttribute('href');
-                    } else {
-                        showPage(page);
-                    }
+                    showPage(page);
                 });
             });
 
@@ -1591,19 +1473,17 @@
             });
 
             // User dropdown
-            document.getElementById('userAvatar').addEventListener('click', (e) => {
+            document.getElementById('userAvatar').addEventListener('click', () => {
+                const dropdown = document.getElementById('userDropdown');
+                dropdown.classList.toggle('active');
+            });
+
+            // Register link
+            document.getElementById('registerLink').addEventListener('click', (e) => {
                 e.preventDefault();
-                document.getElementById('userDropdown').classList.toggle('active');
+                alert('Funcionalidad de registro no implementada en esta versión.');
             });
         });
-
-        function updateUserStats() {
-            document.getElementById('userName').textContent = userData.name;
-            document.getElementById('userEmail').textContent = userData.email || 'No has iniciado sesión';
-            document.getElementById('completedExercises').textContent = userData.completedExercises;
-            document.getElementById('correctAnswers').textContent = userData.totalAnswers ? 
-                Math.round((userData.correctAnswers / userData.totalAnswers) * 100) + '%' : '0%';
-        }
     </script>
 </body>
 </html>
