@@ -653,6 +653,7 @@
             
             .topics-grid, .difficulty-cards {
                 grid-template-columns: 1fr;
+
             }
             
             .options-container {
@@ -693,7 +694,7 @@
                     <li><a href="#" class="nav-link" data-page="math">Matemáticas</a></li>
                     <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Lengua-Castellana/">Lenguaje</a></li>
                     <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Ciencias/" class="nav-link" data-page="science">Ciencias</a></li>
-                    <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Ciencias-Sociales/" class="nav-link" data-page="social">Sociales</a></li>
+                    <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Ciencias-Sociales/" class="nav-link">Sociales</a></li>
                 </ul>
             </nav>
             <div class="user-menu">
@@ -1170,7 +1171,7 @@
                         <li><a href="#" class="nav-link" data-page="math">Matemáticas</a></li>
                         <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Lengua-Castellana/">Lenguaje</a></li>
                         <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Ciencias/" class="nav-link" data-page="science">Ciencias</a></li>
-                        <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Ciencias-Sociales/" class="nav-link" data-page="social">Sociales</a></li>
+                        <li><a href="https://ayoubelouardy.github.io/Practicaejercicios-Ciencias-Sociales/" class="nav-link">Sociales</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1483,7 +1484,9 @@
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
                     const page = link.dataset.page;
-                    if (['home', 'science', 'social'].includes(page)) {
+                    if (['home', 'science'].includes(page)) {
+                        window.location.href = link.getAttribute('href');
+                    } else if (!page) {
                         window.location.href = link.getAttribute('href');
                     } else {
                         showPage(page);
