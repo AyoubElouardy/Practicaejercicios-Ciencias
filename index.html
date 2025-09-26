@@ -1512,54 +1512,6 @@
             </div>
         </div>
     </footer>
-    <div class="modal" id="loginModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Iniciar Sesión</h3>
-                <button class="close-modal">&times;</button>
-            </div>
-            <form id="loginForm">
-                <div class="form-group">
-                    <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" required>
-                </div>
-                <div class="form-footer">
-                    <button type="submit" class="btn btn-physics">Iniciar Sesión</button>
-                    <p>¿No tienes cuenta? <a href="#" id="registerLink">Regístrate</a></p>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="modal" id="registerModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Registrarse</h3>
-                <button class="close-modal">&times;</button>
-            </div>
-            <form id="registerForm">
-                <div class="form-group">
-                    <label for="reg-name">Nombre</label>
-                    <input type="text" id="reg-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="reg-email">Correo electrónico</label>
-                    <input type="email" id="reg-email" required>
-                </div>
-                <div class="form-group">
-                    <label for="reg-password">Contraseña</label>
-                    <input type="password" id="reg-password" required>
-                </div>
-                <div class="form-footer">
-                    <button type="submit" class="btn btn-physics">Registrarse</button>
-                    <p>¿Ya tienes cuenta? <a href="#" id="loginLink">Inicia sesión</a></p>
-                </div>
-            </form>
-        </div>
-    </div>
     <script type="text/javascript">
         var gk_isXlsx = false;
         var gk_xlsxFileLookup = {};
